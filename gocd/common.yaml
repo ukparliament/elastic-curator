@@ -8,15 +8,15 @@ pipelines:
         branch: master
         auto_update: true
     stages:
-      - build:
+      - deploy:
           clean_workspace: true
           jobs:
-            build:
+            deploy:
               tasks:
                 - exec:
                     command: make
                     arguments:
-                      - test
+                      - deploy
 
 
 environments:
