@@ -34,9 +34,3 @@ deploy: build-tools
 	cd src && ../node_modules/.bin/serverless deploy \
 		--account-alias $(ACCOUNT_ALIAS) \
 		--credstash-key $(CREDSTASH_KEY)
-
-src/test-requirements.txt: .venv
-	.venv/bin/pip install -r src/test-requirements.txt
-
-test: src/test-requirements.txt
-	bash -c "source .venv/bin/activate && cd src && pytest tests"
