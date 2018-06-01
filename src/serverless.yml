@@ -31,7 +31,25 @@ provider:
 
 
   iamRoleStatements:
-    
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:Query"
+        - "dynamodb:BatchGetItem"
+        - "dynamodb:GetItem"
+        - "dynamodb:GetRecords"
+      Resource:
+        - "Fn::Join":
+          - ":"
+          -
+            - "arn:aws:dynamodb"
+            - Ref: "AWS::Region"
+            - Ref: "AWS::AccountId"
+            - "table/credential-store"
+    - Effect: "Allow"
+      Action:
+        - "kms:Decrypt"
+      Resource: "${opt:credstash-key}"
+
 
 
 package:
