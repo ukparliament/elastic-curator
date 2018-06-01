@@ -63,7 +63,7 @@ package:
 
 
 functions:
-  pingdom:
+  elastic-curator:
     handler: main.handler
     events:
       - schedule: rate(1 day)
