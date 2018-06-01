@@ -1,0 +1,25 @@
+pipelines:
+  elastic-curator:
+    group: webops
+    label_template: "${COUNT}"
+    materials:
+      webops.importers-git:
+        git: git@github.com:ukparliament/elastic-curator.git
+        branch: master
+        auto_update: true
+    stages:
+      - build:
+          clean_workspace: true
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: make
+                    arguments:
+                      - test
+
+
+environments:
+  Web.DEVCI:
+    pipelines:
+      - elastic-curator

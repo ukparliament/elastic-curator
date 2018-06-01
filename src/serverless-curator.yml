@@ -1,0 +1,17 @@
+---
+# Define Elasticsearch Clusters and indices here, to have them periodically
+# pruned by Curator.
+
+- name: prune elasticsearch indices
+  endpoint: http://internal-elasticsearch-1696314485.eu-west-1.elb.amazonaws.com:9200/
+  indices:
+    - prefix: cloudflare-
+      days: 30
+    - prefix: filebeat-
+      day: 30
+    - prefix: logspout-
+      day: 30
+    - prefix: heartbeat-
+      day: 30
+    - prefix: kinesis-
+      day: 30
