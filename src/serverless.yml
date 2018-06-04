@@ -64,7 +64,7 @@ package:
 
 functions:
   elastic-curator:
-    handler: main.handler
+    handler: serverless-curator.handler
     events:
       - schedule: rate(1 day)
 
