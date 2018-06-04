@@ -8,10 +8,10 @@
     - prefix: cloudflare-
       days: 30
     - prefix: filebeat-
-      day: 30
+      days: 30
     - prefix: logspout-
-      day: 30
+      days: 30
     - prefix: heartbeat-
-      day: 30
+      days: 30
     - prefix: kinesis-
-      day: 30
+      days: 30
