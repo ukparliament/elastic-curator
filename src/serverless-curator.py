@@ -29,8 +29,9 @@ def handler(event, context):
 
         # Create a collection to the cluster. We're using mangaged clusters in
         # Elastic Cloud for this example, so we can enable SSL security.
-        es = Elasticsearch(cluster_config['endpoint'], use_ssl=True,
-                           verify_certs=True, ca_certs=certifi.where())
+#        es = Elasticsearch(cluster_config['endpoint'], use_ssl=True,
+#                           verify_certs=True, ca_certs=certifi.where())
+         es = Elasticsearch(cluster_config['endpoint']
 
         # Now we'll work through each set of time-series indices defined in
         # our config for this cluster.
