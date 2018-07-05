@@ -14,4 +14,4 @@
     - prefix: heartbeat-
       days: 20
     - prefix: kinesis-
-      days: 20
+      days: 5
