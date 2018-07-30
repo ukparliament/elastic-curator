@@ -3,7 +3,7 @@
 # pruned by Curator.
 
 - name: prune elasticsearch indices
-  endpoint: http://internal-elasticsearch-1696314485.eu-west-1.elb.amazonaws.com:9200/
+  endpoint: http://internal-elasticsearch-720766999.eu-west-1.elb.amazonaws.com:9200/
   indices:
     - prefix: cloudflare-
       days: 20
