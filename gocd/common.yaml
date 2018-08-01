@@ -4,7 +4,7 @@ pipelines:
     label_template: "${COUNT}"
     materials:
       webops.importers-git:
-        git: git@github.com:ukparliament/elastic-curator.git
+        git: https://github.com:ukparliament/elastic-curator.git
         branch: master
         auto_update: true
     stages:
