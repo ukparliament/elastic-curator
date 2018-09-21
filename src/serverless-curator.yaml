@@ -6,12 +6,12 @@
   endpoint: http://internal-elasticsearch-720766999.eu-west-1.elb.amazonaws.com:9200/
   indices:
     - prefix: cloudflare-
-      days: 20
+      days: 5
     - prefix: filebeat-
-      days: 20
+      days: 5
     - prefix: logspout-
       days: 20
     - prefix: heartbeat-
-      days: 20
+      days: 1
     - prefix: kinesis-
-      days: 5
+      days: 30
